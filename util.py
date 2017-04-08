@@ -9,7 +9,6 @@ def log_generator(file):
     # make the pointer go the end of file
     file.seek(0, 2)
 
-    # always true when
     while True:
         # read on each line
         line = file.readline()
@@ -17,7 +16,7 @@ def log_generator(file):
         # check if line (log message) not empty
         if not line:
 
-            # delay the process, and DON'T Generate file
+            # delay the process, and DON'T Generate the empty line
             time.sleep(0.1)
             continue
 
